@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development && webpack-dev-server --devtool --progress",
     "server": "pm2 start ./server/pagemaker",
+    "watch": "nodemon --watch server server/pagemaker",
     "build": "cross-env NODE_ENV=production && webpack -p"
   },
   "repository": {

@@ -4,31 +4,31 @@ include ./common/docHead
 //- http://10.234.65.156:4000/public/main.js
 
 +docHead({
-	title:'前端页面制作工具',
-	keywords:'制作工具,pagemaker,h5页面制作',
-	description: '触屏版信息页::制作工具',
-	favicon: '/public/favicon.ico',
-	notCommon: true,
-	debugJS: false,
-	debugCSS_IP: '',
-	showProgressBar: true,
-	cssFile: [
-		'/public/main.css', 
-		'https://cdn.bootcss.com/antd/2.5.2/antd.min.css', 
-		'https://cdn.bootcss.com/codemirror/5.28.0/codemirror.min.css',
-		'https://cdn.bootcss.com/codemirror/5.28.0/theme/monokai.min.css',
-	]
+    title: '前端页面制作工具',
+    keywords: '制作工具,pagemaker,h5页面制作',
+    description: '触屏版信息页::制作工具',
+    favicon: '/public/favicon.ico',
+    notCommon: true,
+    debugJS: false,
+    debugCSS_IP: '',
+    showProgressBar: true,
+    cssFile: [
+        'http://127.0.0.1:8080/public/main.css',
+        'https://cdn.bootcss.com/antd/2.5.2/antd.min.css',
+        'https://cdn.bootcss.com/codemirror/5.28.0/codemirror.min.css',
+        'https://cdn.bootcss.com/codemirror/5.28.0/theme/monokai.min.css',
+    ]
 })
 body
-	#app
-	+jsFile([
-		'https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js',
-		'https://cdn.bootcss.com/react/15.3.1/react.min.js',
-		'https://cdn.bootcss.com/react-dom/15.3.1/react-dom.min.js',
-		'https://cdn.bootcss.com/react-router/3.2.0/ReactRouter.min.js',
-		'https://cdn.bootcss.com/immutable/3.8.1/immutable.min.js',
-		'https://cdn.bootcss.com/codemirror/5.28.0/codemirror.js',
-		'https://cdn.bootcss.com/codemirror/5.28.0/mode/javascript/javascript.min.js',
-		'https://cdn.bootcss.com/codemirror/5.28.0/mode/css/css.min.js',
-		'/public/main.js'
-	])
+    #app
+    +jsFile([
+        'https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js',
+        'https://cdn.bootcss.com/react/15.3.1/react.min.js',
+        'https://cdn.bootcss.com/react-dom/15.3.1/react-dom.min.js',
+        'https://cdn.bootcss.com/react-router/3.2.0/ReactRouter.min.js',
+        'https://cdn.bootcss.com/immutable/3.8.1/immutable.min.js',
+        'https://cdn.bootcss.com/codemirror/5.28.0/codemirror.js',
+        'https://cdn.bootcss.com/codemirror/5.28.0/mode/javascript/javascript.min.js',
+        'https://cdn.bootcss.com/codemirror/5.28.0/mode/css/css.min.js',
+        'http://127.0.0.1:8080/public/main.js',
+    ])

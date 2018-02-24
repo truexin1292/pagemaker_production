@@ -13,33 +13,42 @@ class Header extends React.Component {
     // static defaultProps = {
     //     name: "游客"
     // };
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
             username: ''
         }
     }
+
     // ajax请求正确方式
-    componentDidMount(){
+    componentDidMount() {
         fetch('/username', {
             method: 'get',
             headers: {
                 'Content-Type': 'application/json'
             }
         })
-        .then(response => response.json())
-        .then(data => {
-            this.setState({username: data.data.username || '游客'})
-        })
-        .catch(e => console.log("Oops, error", e))
+            .then(response => response.json())
+            .then(data => {
+                this.setState({
+                    username: data.data.username || '游客',
+                    code: data.data.code || 0,
+                })
+            })
+            .catch(e => console.log("Oops, error", e))
     }
+
     render() {
-        const {username} = this.state;
+        const { username, code } = this.state;
         return (
             <header className="f-cb">
                 <i className="aside-unitList icon iconfont icon-zhankai" id="J_aside"></i>
-                <a href="/" className="goHome f-fl"><i className="icon iconfont icon-fire"></i><span>Pagemaker</span></a>
+                <a href="/" className="goHome f-fl">
+                    <i className="icon iconfont icon-fire"></i>
+                    <span>Pagemaker</span>
+                </a>
                 <div className="user f-fr"><a>您好，{username}</a></div>
+                <div className="user f-fr"><a>版本{code}</a></div>
             </header>
         );
     }
